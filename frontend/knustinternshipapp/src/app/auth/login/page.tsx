@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import Link from "next/link";
+import { useState } from "react";
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Username:', username, 'Email:', email, 'Password:', password);
-    alert('Login button clicked!');
+    console.log("Username:", username, "Email:", email, "Password:", password);
+    alert("Login button clicked!");
   };
 
   return (
@@ -96,10 +97,10 @@ const LoginPage = () => {
             </button>
           </form>
           <p className="text-sm text-center text-gray-600 mt-4">
-            Don't have an account?{' '}
-            <a href="#" className="text-blue-600 font-bold">
+            Don't have an account?{" "}
+            <Link href="/auth/signup" className="text-blue-600 font-bold">
               Sign up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
@@ -110,9 +111,8 @@ const LoginPage = () => {
           Join for Free
         </h2>
         <h3 className="text-2xl lg:text-3xl font-bold text-gray-800 text-center mb-4">
-          Receive{' '}
-          <span className="text-blue-600">Internship Letters</span> Swift &
-          Secured with Progress Tracking
+          Receive <span className="text-blue-600">Internship Letters</span>{" "}
+          Swift & Secured with Progress Tracking
         </h3>
         <button className="bg-white border-2 border-green-500 text-green-500 font-bold py-2 px-6 rounded-full hover:bg-green-500 hover:text-white">
           Explore
